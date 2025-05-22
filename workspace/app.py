@@ -6,7 +6,7 @@ import os
 def main(image_path: str, prompt="Describe this image."):
     device = "cuda:0" if torch.cuda.is_available() else "cpu"
 
-    model_name = "Salesforce/blip2-opt-2.7b"
+    model_name =  "Salesforce/blip2-opt-2.7b"
     processor = Blip2Processor.from_pretrained(model_name)
     model = Blip2ForConditionalGeneration.from_pretrained(model_name, device_map="auto")
 
